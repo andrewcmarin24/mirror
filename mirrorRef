@@ -1,0 +1,54 @@
+public class MirrorRef {
+  
+  public static final int SIZE = 3;
+
+  public static void main(String[] args) {
+    
+    line();
+    topHalf();
+    bottomHalf();
+    line();
+    
+  public static void line() {
+     System.out.print("#");
+     for (int i =1;  i <= 4*SIZE; i++) {
+        System.out.print("=");
+     }
+     System.out.println("#");
+  }
+     
+  public static void topHalf() {
+     for (int i = 1; i <= SIZE; i++) {
+        System.out.print("|");
+        for (int j = 1; j <= (-2*i+(2*SIZE)) ; j++) {
+           System.out.print(" ");
+        }
+        System.out.print("<>");
+        for (int j = 1; j <= 4*i-4; j++) {
+           System.out.print(".");
+        }
+        System.out.print("<>");       
+        for (int j = 1; j <= (-2*i+(2*SIZE)) ; j++) {
+           System.out.print(" ");
+        }        
+        System.out.println("|");     
+     } 
+  }  // topHalf()
+  public static void bottomHalf() {
+     for (int i = 1; i <= SIZE; i++) {
+        System.out.print("|");
+        for (int j = 1; j <= (2*i-2) ; j++) {
+           System.out.print(" ");
+        }
+        System.out.print("<>");
+        for (int j = 1; j <= -4*i+12; j++) {
+           System.out.print(".");
+        }
+        System.out.print("<>");       
+        for (int j = 1; j <= (2*i-2) ; j++) {
+           System.out.print(" ");
+        }        
+        System.out.println("|");
+     }
+  } // bottomHalf
+}
